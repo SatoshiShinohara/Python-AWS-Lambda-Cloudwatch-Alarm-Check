@@ -24,7 +24,6 @@ def lambda_handler(event, context):
                     TopicArn=alarmaction,
                     Subject='reALARM: "' + metricalarm['AlarmName'] + '"',
                     Message=metricalarm['AlarmName']
-                    
                 )
 
     # print(all_list)
