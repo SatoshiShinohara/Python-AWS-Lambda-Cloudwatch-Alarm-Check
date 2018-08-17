@@ -2,8 +2,7 @@ import boto3
 
 def lambda_handler(event, context):
     # リージョンを取得
-    # client = boto3.client('cloudwatch', event['Region'])
-    client = boto3.client('cloudwatch', region_name='ap-northeast-1')
+    client = boto3.client('cloudwatch', event['Region'])
     sns = boto3.client('sns')
 
     # リージョン内のアラーム一覧を取得
